@@ -9,13 +9,16 @@ if [ -z "$deployPath" ]; then
 fi  
 
 echo "Deploying to $deployPath"
-
-# 2. build the app
 cd companion-website
+
+# 2. install the requirements
+npm install
+
+# 3. build the app
 yarn build
 
-# 3. clear the existing files
+# 4. clear the existing files
 rm -rf $deployPath/*
 
-# 4. copy to the path
+# 5. copy to the path
 cp build/* $deployPath
