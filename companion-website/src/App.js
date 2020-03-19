@@ -14,24 +14,6 @@ import './App.css';
     }
   
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
-    renderTab() {
-      if( this.state.activeItem === 'about' ){
-        return (
-        <About />
-        );
-      }
-
-      if( this.state.activeItem === 'downloads' ){
-        return (
-        <Downloads />
-        );
-      }
-
-      return (
-        <GetBook />
-      );
-    }
   
     render() {
       const { activeItem } = this.state
@@ -70,7 +52,9 @@ import './App.css';
             </Container>
           </Container>
 
-          {this.renderTab()}
+          {activeItem === 'getBook' && <GetBook />}
+          {activeItem === 'downloads' && <Downloads />}
+          {activeItem === 'about' && <About />}
         </>
       )
     }
