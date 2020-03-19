@@ -5,9 +5,13 @@ import About from "./About";
 import Downloads from "./Downloads";
 import "./App.css";
 
+const TAB_GET_BOOK = "getBook"; 
+const TAB_ABOUT = "about"; 
+const TAB_DOWNLOADS = "downloads"; 
+
 class MainSite extends Component {
   state = {
-    activeItem: "getBook"
+    activeItem: TAB_GET_BOOK
   };
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
@@ -33,8 +37,8 @@ class MainSite extends Component {
               style={{ borderColor: "#009ec2" }}
             >
               <Menu.Item
-                name="getBook"
-                active={activeItem === "getBook"}
+                name={TAB_GET_BOOK}
+                active={activeItem === TAB_GET_BOOK}
                 style={{ color: "white" }}
                 onClick={this.handleItemClick}
               >
@@ -42,8 +46,8 @@ class MainSite extends Component {
               </Menu.Item>
 
               <Menu.Item
-                name="downloads"
-                active={activeItem === "downloads"}
+                name={TAB_DOWNLOADS}
+                active={activeItem === TAB_DOWNLOADS}
                 style={{ color: "white" }}
                 onClick={this.handleItemClick}
               >
@@ -51,8 +55,8 @@ class MainSite extends Component {
               </Menu.Item>
 
               <Menu.Item
-                name="about"
-                active={activeItem === "about"}
+                name={TAB_ABOUT}
+                active={activeItem === TAB_ABOUT}
                 onClick={this.handleItemClick}
               >
                 About
@@ -61,9 +65,9 @@ class MainSite extends Component {
           </Container>
         </Container>
 
-        {activeItem === "getBook" && <GetBook />}
-        {activeItem === "downloads" && <Downloads />}
-        {activeItem === "about" && <About />}
+        {activeItem === TAB_GET_BOOK && <GetBook />}
+        {activeItem === TAB_DOWNLOADS && <Downloads />}
+        {activeItem === TAB_ABOUT && <About />}
       </>
     );
   }
