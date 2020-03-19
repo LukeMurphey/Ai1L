@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import {
-  Button,
   Container,
-  Grid,
-  Header,
-  Image,
   Menu,
 } from 'semantic-ui-react'
 import GetBook from './GetBook'
