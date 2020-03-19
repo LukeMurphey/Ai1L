@@ -38,9 +38,9 @@ import './App.css';
 
       return (
         <>
-          <Container fluid style={{ backgroundColor: 'black', padding: '8px', marginBottom: 16 }}>
+          <Container fluid style={{ backgroundColor: '#009ec2', padding: '8px', marginBottom: 16 }}>
             <Container text>
-            <Menu pointing secondary inverted>
+            <Menu pointing secondary inverted style={{ borderColor: '#009ec2' }}>
               <Menu.Item
                 name='getBook'
                 active={activeItem === 'getBook'}
