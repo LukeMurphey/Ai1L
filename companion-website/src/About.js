@@ -41,10 +41,10 @@ import {
                 <li>References to related books and videos to enable the teacher to be prepared</li>
             </ol>
 
-            <Header as='h3' dividing>3. Didn't expose Christian's to some of the latest research</Header>
+            <Header as='h3' dividing>3. Expose Christian's to some of the latest New Testament research</Header>
             Great gains have been made in recent years in New Testament studies in several areas.
             For example, recent research has provided more reasons to see the Gospels as the product of eyewitness testimony.
-            Too often, Christian's are unaware of these recent developments.           
+            Too often, Christian's are unaware of these recent developments.
         </Container>
       )
     }
