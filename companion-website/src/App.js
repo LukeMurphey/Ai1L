@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Menu } from "semantic-ui-react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link,
