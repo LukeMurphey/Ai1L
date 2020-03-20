@@ -1,26 +1,44 @@
 import React, { Component } from "react";
 import { Container, Menu } from "semantic-ui-react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch
+} from "react-router-dom";
 import GetBook from "./GetBook";
 import About from "./About";
 import Downloads from "./Downloads";
 import "./App.css";
 
-const TAB_GET_BOOK = "getBook"; 
-const TAB_ABOUT = "about"; 
-const TAB_DOWNLOADS = "downloads"; 
+/**
+ * This class offers a menu entry for a tab that works with the React router to show the tab when clicked.
+ */
+function TabMenuItem({ label, to, activeOnlyWhenExact }) {
+  let match = useRouteMatch({
+    path: to,
+    exact: activeOnlyWhenExact
+  });
 
+  return (
+      <Menu.Item
+      name={label}
+      active={match}
+      style={{ color: "white" }}
+    >
+      <Link to={to}>{label}</Link>
+    </Menu.Item>
+  );
+}
+
+/**
+ * This component shows the main site tabs and uses a React router to show the content based on the URL.
+ */
 class MainSite extends Component {
-  state = {
-    activeItem: TAB_GET_BOOK
-  };
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
-
   render() {
-    const { activeItem } = this.state;
-
     return (
-      <>
+      <Router>
         <Container
           fluid
           style={{
@@ -36,39 +54,25 @@ class MainSite extends Component {
               inverted
               style={{ borderColor: "#009ec2" }}
             >
-              <Menu.Item
-                name={TAB_GET_BOOK}
-                active={activeItem === TAB_GET_BOOK}
-                style={{ color: "white" }}
-                onClick={this.handleItemClick}
-              >
-                Get the Book
-              </Menu.Item>
-
-              <Menu.Item
-                name={TAB_DOWNLOADS}
-                active={activeItem === TAB_DOWNLOADS}
-                style={{ color: "white" }}
-                onClick={this.handleItemClick}
-              >
-                Downloads
-              </Menu.Item>
-
-              <Menu.Item
-                name={TAB_ABOUT}
-                active={activeItem === TAB_ABOUT}
-                onClick={this.handleItemClick}
-              >
-                About
-              </Menu.Item>
+              <TabMenuItem to="/" label="Get the Book" activeOnlyWhenExact={true}/>
+              <TabMenuItem to="/resources" label="Downloads" />
+              <TabMenuItem to="/about" label="About" />
             </Menu>
           </Container>
         </Container>
 
-        {activeItem === TAB_GET_BOOK && <GetBook />}
-        {activeItem === TAB_DOWNLOADS && <Downloads />}
-        {activeItem === TAB_ABOUT && <About />}
-      </>
+        <Switch>
+          <Route exact path="/">
+            <GetBook />
+          </Route>
+          <Route path="/resources">
+            <Downloads />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+        </Switch>
+      </Router>
     );
   }
 }
