@@ -5,6 +5,7 @@ import {
   Table,
   Popup,
 } from 'semantic-ui-react'
+import ButtonLink from './ButtonLink'
 import downloads from './downloads.json'
 
   class Downloads extends Component {
@@ -32,7 +33,9 @@ import downloads from './downloads.json'
           {downloads.map((item, index) => (
             <Table.Row key={index}>
               <Table.Cell><Popup content={item.description} trigger={<div>{item.title}</div>} /></Table.Cell>
-              <Table.Cell><a href="#" onClick={() => this.downloadFile(item.file)}>Download</a></Table.Cell>
+              <Table.Cell>
+                <ButtonLink style={{padding: 0}} className="ui button" onClick={() => this.downloadFile(item.file)}>Download</ButtonLink>
+              </Table.Cell>
             </Table.Row>
           ))}
          </Table.Body>
