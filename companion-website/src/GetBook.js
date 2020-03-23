@@ -8,11 +8,16 @@ import {
 } from 'semantic-ui-react'
 
   class GetBook extends Component {
+
+    downloadFile(file) {
+      window.open(`files\\${file}`);
+    }
+
     render() {
       return (
         <Container text>
         <Header as='h1' dividing>
-          Apologetics in (almost) a Single Lesson
+          Apologetics in (almost) One Lesson
         </Header>
   
         <Grid>
@@ -22,7 +27,7 @@ import {
               <Button style={{width:'100%'}}>Buy the book</Button>
             </div>
             <div style={{marginTop: 12}}>
-              <Button style={{width:'100%'}}>Download book</Button>
+              <Button onClick={() => this.downloadFile("study_guide.pdf")} style={{width:'100%'}}>Download book</Button>
             </div>
           </Grid.Column>
           <Grid.Column width={11}>
