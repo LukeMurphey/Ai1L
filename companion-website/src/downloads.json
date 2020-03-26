@@ -33,5 +33,12 @@
         "description": "This essay was originally presented in 1944 at an oxford debating society called the “Socratic Club”. Lewis discusses how the Christian faith answers many of life's questions.",
         "file": "Theology_As_Poetry_Lewis.pdf",
         "short": "TheologyPoetry"
+    },
+    {
+        "title": "Horae Paulinae",
+        "author": "William Paley",
+        "description": "Paley’s book contains a thorough analysis of Paul’s letters in order to show that they represent the truth. This book was first published in 1790 but is an easy read.",
+        "file": "Horae_Paulinae.pdf",
+        "short": "Paulinae"
     }
 ]
