@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Container, Header, Table, Popup } from "semantic-ui-react";
+import { Container, Header, Table, Popup, Button } from "semantic-ui-react";
 import ButtonLink from "./ButtonLink";
 import downloads from "./downloads.json";
 import queryString from "query-string";
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export function downloadFileFromQuery() {
   // eslint-disable-next-line no-restricted-globals
@@ -75,6 +76,13 @@ export class Downloads extends Component {
                   >
                     Download
                   </ButtonLink>
+                  <CopyToClipboard text={`${document.location.origin}?${item.short}`}>
+                    <Button
+                      className="ui button"
+                    >
+                      Copy Link
+                    </Button>
+                  </CopyToClipboard>
                 </Table.Cell>
               </Table.Row>
             ))}
