@@ -9,7 +9,10 @@ export function downloadFileFromQuery() {
   const params = queryString.parse(location.search);
 
   if (Object.keys(params).length > 0) {
+    // Get the ID of the requested file
     const fileId = Object.keys(params)[0];
+
+    // Try to download the file if it was found
     if (!downloadFileShort(fileId, false)) {
       return `Unable to find the file for download`;
     }
@@ -19,7 +22,7 @@ export function downloadFileFromQuery() {
 export function downloadFileShort(shortName, openInNewTab = true) {
   // Find the file
   var requestedDownload = downloads.find(
-    download => shortName === download.short
+    download => shortName.trim().toUpperCase() === download.short.toUpperCase()
   );
 
   // Download the file if we found it
