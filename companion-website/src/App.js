@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Menu } from "semantic-ui-react";
+import { Container, Menu, Message } from "semantic-ui-react";
 import {
   HashRouter as Router,
   Switch,
@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import GetBook from "./GetBook";
 import About from "./About";
-import Downloads from "./Downloads";
+import { Downloads, downloadFileFromQuery } from "./Downloads";
 import "./App.css";
 
 /**
@@ -37,6 +37,8 @@ function TabMenuItem({ label, to, activeOnlyWhenExact }) {
  */
 class MainSite extends Component {
   render() {
+    const downloadMessage = downloadFileFromQuery();
+
     return (
       <Router>
         <Container
@@ -60,6 +62,8 @@ class MainSite extends Component {
             </Menu>
           </Container>
         </Container>
+
+        {downloadMessage ? <Message style={{padding: 16}} negative>{downloadMessage}</Message> : <React.Fragment />}
 
         <Switch>
           <Route exact path="/">
