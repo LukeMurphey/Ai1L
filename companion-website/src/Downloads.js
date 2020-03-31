@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Header, Table, Popup, Button } from "semantic-ui-react";
+import { Container, Header, Table, Popup, Message } from "semantic-ui-react";
 import ButtonLink from "./ButtonLink";
 import downloads from "./downloads.json";
 import queryString from "query-string";
@@ -44,18 +44,28 @@ export function downloadFile(file) {
 };
 
 export class Downloads extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { message: null };
+  }
+
   render() {
+    // Hide the message we are about to show in a bit
+    if (this.state.message) {
+      setTimeout(() => this.setState({ message:'' }), 3000);
+    }
     return (
       <Container text>
         <Header as="h1" dividing>
           Downloads
         </Header>
-
+        {this.state.message ? <Message positive>{this.state.message}</Message> : <React.Fragment />}
         <Table celled>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell>Title</Table.HeaderCell>
-              <Table.HeaderCell>Links</Table.HeaderCell>
+              <Table.HeaderCell></Table.HeaderCell>
+              <Table.HeaderCell></Table.HeaderCell>
             </Table.Row>
           </Table.Header>
 
@@ -76,13 +86,17 @@ export class Downloads extends Component {
                   >
                     Download
                   </ButtonLink>
+                </Table.Cell>
+                <Table.Cell>
                   <CopyToClipboard text={`${document.location.origin}?${item.short}`}>
-                    <Button
-                      className="ui button"
-                    >
-                      Copy Link
-                    </Button>
-                  </CopyToClipboard>
+                      <ButtonLink
+                        style={{ padding: 0 }}
+                        className="ui button"
+                        onClick={() => this.setState({message:"Copied to the clipboard!"})}
+                      >
+                        Copy Link
+                      </ButtonLink>
+                    </CopyToClipboard>
                 </Table.Cell>
               </Table.Row>
             ))}
