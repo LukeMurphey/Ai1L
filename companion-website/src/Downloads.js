@@ -49,6 +49,13 @@ export class Downloads extends Component {
     this.state = { message: null };
   }
 
+  makeShortLink(download) {
+    // Change the domain so that it is easier to make sense of the lowercase "l"
+    const domain = document.location.origin.replace("ai1l", "Ai1L");
+
+    return `${domain}?${download.short}`;
+  }
+
   render() {
     // Hide the message we are about to show in a bit
     if (this.state.message) {
@@ -80,13 +87,13 @@ export class Downloads extends Component {
                   <ButtonLink
                     style={{ padding: 0 }}
                     className="ui button"
-                    onClick={() => this.downloadFile(item.file)}
+                    onClick={() => downloadFile(item.file)}
                   >
                     Download
                   </ButtonLink>
                 </Table.Cell>
                 <Table.Cell>
-                  <CopyToClipboard text={`${document.location.origin}?${item.short}`}>
+                  <CopyToClipboard text={this.makeShortLink(item)}>
                       <ButtonLink
                         style={{ padding: 0 }}
                         className="ui button"
