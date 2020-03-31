@@ -63,9 +63,7 @@ export class Downloads extends Component {
         <Table celled>
           <Table.Header>
             <Table.Row>
-              <Table.HeaderCell>Title</Table.HeaderCell>
-              <Table.HeaderCell></Table.HeaderCell>
-              <Table.HeaderCell></Table.HeaderCell>
+              <Table.HeaderCell colSpan='3'>Title</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
 
