@@ -28,7 +28,7 @@ import {
           <Grid.Column width={5}>
             <Image bordered rounded src='/Single Lesson Cover.png' />
             <div style={{marginTop: 12}}>
-              <Button onClick={() => this.openLink("http://www.lulu.com/shop/luke-murphey/apologetics-in-almost-one-lesson/paperback/product-24486440.html")} style={{width:'100%'}}>Buy the book</Button>
+              <Button onClick={() => this.openLink("http://www.lulu.com/shop/luke-murphey/apologetics-in-almost-one-lesson/paperback/product-24496780.html")} style={{width:'100%'}}>Buy the book</Button>
             </div>
             <div style={{marginTop: 12}}>
               <Button onClick={() => this.downloadFile("study_guide.pdf")} style={{width:'100%'}}>Download book</Button>
