@@ -36,15 +36,15 @@ import {
           </Grid.Column>
           <Grid.Column width={11}>
             <p>
-            This study guide was written in order to make evidences more approachable and easier to defend while also exposing Christians to some of the latest relevant research in New Testament studies.
+            This guide provides students with a defense of the New Testament.
+            Specifically, it focuses on a defense of two of the New Testament's claims:
             
-            <div style={{marginTop:12}}><strong>This material will:</strong></div>
-  
             <ol>
-              <li>Focus on a defense of the New Testament (the very thing that Christian's know and are interested in)</li>
-              <li>Equip the students to have an easier time discussing their faith by employing tactics that make engaging others simpler</li>
-              <li>Use content that makes people excited to defend the Gospel</li>
+              <li>Jesus of Nazareth was resurrected</li>
+              <li>The primary source accounts (the New Testament) came from eyewitnesses</li>
             </ol>
+            
+            This content was written in order to make evidences approachable and easier to defend while also exposing Christians to some of the latest relevant research in New Testament studies.
             </p>
 
             <p>

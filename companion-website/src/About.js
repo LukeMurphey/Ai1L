@@ -22,7 +22,7 @@ import {
             <ol>
                 <li>Christianity rises or falls on the resurrection: Paul says so in 1 Corinthians 15</li>
                 <li>This lets Christians focus on their strength (the New Testament) as opposed to asking them to take on a skill that they have little background in (Cosmology, Entomology, etc.).</li>
-                <li>It allows the class to become more knowledgeable in the Gospel accounts (nice side benefit to the main apologetic reason)</li>
+                <li>It allows the class to become more knowledgeable in the Gospel accounts (a nice side benefit to the main apologetic reason)</li>
             </ol>
 
             <Header as='h3' dividing>2. Material focused on supporting a class environment</Header>
@@ -33,7 +33,7 @@ import {
             This material is different in that it provides complete material to make the teacher's job easier, including: 
 
             <ol>
-                <li>Briefing statements to help the teacher guide the class achieve the goals of each session</li>
+                <li>Briefing statements to help the teacher achieve the goals of each session</li>
                 <li>Discussion notes for the teacher to help them manage the discussion</li>
                 <li>Slides including visualizations, quotes and pictures to make the content more understandable and impactful</li>
                 <li>References to related books and videos to enable the teacher to be prepared</li>
