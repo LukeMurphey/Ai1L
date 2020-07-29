@@ -40,5 +40,12 @@
         "description": "Paley’s book contains a thorough analysis of Paul’s letters in order to show that they represent the truth. This book was first published in 1790 but is an easy read.",
         "file": "Horae_Paulinae.pdf",
         "short": "Paulinae"
+    },
+    {
+        "title": "Slides: Introduction",
+        "author": "Luke Murphey",
+        "description": "The introductory slides for the class",
+        "file": "0. Intro.pptx",
+        "short": "Intro"
     }
 ]

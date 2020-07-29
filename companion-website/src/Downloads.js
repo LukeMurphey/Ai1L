@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Header, Table, Popup, Message } from "semantic-ui-react";
+import { Container, Header, Table, Popup, Message, Button } from "semantic-ui-react";
 import ButtonLink from "./ButtonLink";
 import downloads from "./downloads.json";
 import queryString from "query-string";
@@ -43,10 +43,31 @@ export function downloadFile(file) {
   window.open(`files\\${file}`);
 };
 
+const FILETYPE_ALL = null;
+const FILETYPE_PPTX = 'pptx';
+const FILETYPE_DOWNLOADS = 'downloads';
+
+export function filterFiles(downloads, fileType) {
+  return downloads.filter(
+    download => {
+      if(!fileType) {
+        return true;
+      }
+      else if (fileType === FILETYPE_PPTX) {
+        return download.file.endsWith('.pptx');
+      }
+      else if (fileType === FILETYPE_DOWNLOADS) {
+        return !download.file.endsWith('.pptx');
+      }
+
+      return true;
+  });
+};
+
 export class Downloads extends Component {
   constructor(props) {
     super(props);
-    this.state = { message: null };
+    this.state = { message: null, fileType: FILETYPE_ALL, };
   }
 
   makeShortLink(download) {
@@ -56,16 +77,28 @@ export class Downloads extends Component {
     return `${domain}?${download.short}`;
   }
 
+  filterDownloads(filter) {
+    this.setState({fileType: filter});
+  }
+
   render() {
     // Hide the message we are about to show in a bit
     if (this.state.message) {
       setTimeout(() => this.setState({ message:'' }), 3000);
     }
+
     return (
       <Container text>
         <Header as="h1" dividing>
           Downloads
         </Header>
+
+        <Button.Group>
+          <Button active={this.state.fileType === FILETYPE_ALL} onClick={() => this.filterDownloads(FILETYPE_ALL)}>All</Button>
+          <Button active={this.state.fileType === FILETYPE_PPTX} onClick={() => this.filterDownloads(FILETYPE_PPTX)}>Slides (Powerpoints)</Button>
+          <Button active={this.state.fileType === FILETYPE_DOWNLOADS} onClick={() => this.filterDownloads(FILETYPE_DOWNLOADS)}>Books</Button>
+        </Button.Group>
+
         {this.state.message ? <Message positive>{this.state.message}</Message> : <React.Fragment />}
         <Table celled>
           <Table.Header>
@@ -75,7 +108,7 @@ export class Downloads extends Component {
           </Table.Header>
 
           <Table.Body>
-            {downloads.map((item, index) => (
+            {filterFiles(downloads, this.state.fileType).map((item, index) => (
               <Table.Row key={index}>
                 <Table.Cell>
                   <Popup
