@@ -47,5 +47,12 @@
         "description": "The introductory slides for the class",
         "file": "0. Intro.pptx",
         "short": "Intro"
+    },
+    {
+        "title": "Slides: Chapter 1 (The Art of Asking Questions)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 1",
+        "file": "1. Art of Asking Questions.pptx",
+        "short": "Chapter_1"
     }
 ]
