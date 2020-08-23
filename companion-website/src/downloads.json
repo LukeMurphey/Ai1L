@@ -54,5 +54,110 @@
         "description": "The slides for chapter 1",
         "file": "1. Art of Asking Questions.pptx",
         "short": "Chapter_1"
+    },
+    {
+        "title": "Slides: Chapter 3 (Ambassadors for Christ)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 3",
+        "file": "3. Ambassadors for Christ.pptx",
+        "short": "Chapter_3"
+    },
+    {
+        "title": "Slides: Chapter 4 (A-Paul-agetics)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 4",
+        "file": "4. A-Paul-agetics.pptx",
+        "short": "Chapter_4"
+    },
+    {
+        "title": "Slides: Chapter 6 (Eyewitness Memory)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 6",
+        "file": "6. Eyewitness Memory.pptx",
+        "short": "Chapter_6"
+    },
+    {
+        "title": "Slides: Chapter 7 (Primacy of the Primary Sources)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 7",
+        "file": "7. Primacy of the Primary Sources.pptx",
+        "short": "Chapter_7"
+    },
+    {
+        "title": "Slides: Chapter 8 (Jesus the Rabbi)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 8",
+        "file": "8. Jesus the Rabbi.pptx",
+        "short": "Chapter_8"
+    },
+    {
+        "title": "Slides: Chapter 10 (\"Christians believe by faith not facts\")",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 10",
+        "file": "10. Christians believe by faith not facts.pptx",
+        "short": "Chapter_10"
+    },
+    {
+        "title": "Slides: Chapter 11 (Evidence for God that Everyone Has)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 11",
+        "file": "11. Evidence for God.pptx",
+        "short": "Chapter_11"
+    },
+    {
+        "title": "Slides: Chapter 16 (With the Gospel, I See the World as It Is)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 16",
+        "file": "16. With the Gospel, I See the World as It Is.pptx",
+        "short": "Chapter_16"
+    },
+    {
+        "title": "Slides: Chapter 17 (Isaiah 53)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 17",
+        "file": "17. Isaiah 53.pptx",
+        "short": "Chapter_17"
+    },
+    {
+        "title": "Slides: Chapter 18 (\"Isaiah 53 is not fulfilled prophecy\")",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 18",
+        "file": "18. Isaiah 53 is not fulfilled prophecy.pptx",
+        "short": "Chapter_18"
+    },
+    {
+        "title": "Slides: Chapter 22 (Is the New Testament Corrupted?)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 22",
+        "file": "22. Is the New Testament Corrupted.pptx",
+        "short": "Chapter_22"
+    },
+    {
+        "title": "Slides: Chapter 23 (Has the Bible Been Mistranslated?)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 23",
+        "file": "23. Has the Bible Been Mistranslated.pptx",
+        "short": "Chapter_23"
+    },
+    {
+        "title": "Slides: Chapter 24 (Facts 1 & 2)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 24",
+        "file": "24. Facts 1 & 2.pptx",
+        "short": "Chapter_24"
+    },
+    {
+        "title": "Slides: Chapter 26 (Facts 3 and 4)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 26",
+        "file": "26. Facts 3 and 4.pptx",
+        "short": "Chapter_26"
+    },
+    {
+        "title": "Slides: Chapter 27 (Dealing with Doubt)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 27",
+        "file": "27. Dealing with Doubt.pptx",
+        "short": "Chapter_27"
     }
 ]
