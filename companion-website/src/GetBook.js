@@ -41,7 +41,7 @@ const GetBook = () => {
           </div>
         </Grid.Column>
         <Grid.Column width={11}>
-          <p>
+          <div>
             This guide provides students with a defense of the New Testament.
             Specifically, it focuses on a defense of two of the New Testament's
             claims:
@@ -55,13 +55,13 @@ const GetBook = () => {
             This content was written in order to make evidences approachable and
             easier to defend while also exposing Christians to some of the
             latest relevant research in New Testament studies.
-          </p>
+          </div>
 
-          <p>
-            This material is provided free of charge. The printed study guide is
+          <div>
+            This material is divrovided free of charge. The printed study guide is
             not free but the price is entirely for printing (the author does not
             make a profit).
-          </p>
+          </div>
         </Grid.Column>
       </Grid>
     </Container>
