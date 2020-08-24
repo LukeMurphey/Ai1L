@@ -24,7 +24,7 @@ function TabMenuItem({ label, to, activeOnlyWhenExact }) {
   return (
       <Menu.Item
       name={label}
-      active={match}
+      active={match === label}
       style={{ color: "white" }}
     >
       <Link to={to}>{label}</Link>
