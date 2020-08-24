@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import GetBook from "./GetBook";
 import About from "./About";
-import { Downloads, downloadFileFromQuery } from "./Downloads";
+import Downloads, { downloadFileFromQuery } from "./Downloads";
 import "./App.css";
 
 /**

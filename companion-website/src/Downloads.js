@@ -1,9 +1,18 @@
-import React, { Component } from "react";
-import { Container, Header, Table, Popup, Message, Button } from "semantic-ui-react";
+import React, { useState } from "react";
+import {
+  Container,
+  Header,
+  Table,
+  Popup,
+  Message,
+  Button,
+  Input,
+  Icon,
+} from "semantic-ui-react";
 import ButtonLink from "./ButtonLink";
 import downloads from "./downloads.json";
 import queryString from "query-string";
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 export function downloadFileFromQuery() {
   // eslint-disable-next-line no-restricted-globals
@@ -18,12 +27,13 @@ export function downloadFileFromQuery() {
       return `Unable to find the file for download`;
     }
   }
-};
+}
 
 export function downloadFileShort(shortName, openInNewTab = true) {
   // Find the file
   var requestedDownload = downloads.find(
-    download => shortName.trim().toUpperCase() === download.short.toUpperCase()
+    (download) =>
+      shortName.trim().toUpperCase() === download.short.toUpperCase()
   );
 
   // Download the file if we found it
@@ -37,112 +47,170 @@ export function downloadFileShort(shortName, openInNewTab = true) {
   }
 
   return false;
-};
+}
 
 export function downloadFile(file) {
   window.open(`files\\${file}`);
-};
+}
 
 const FILETYPE_ALL = null;
-const FILETYPE_PPTX = 'pptx';
-const FILETYPE_DOWNLOADS = 'downloads';
+const FILETYPE_PPTX = "pptx";
+const FILETYPE_DOWNLOADS = "downloads";
 
 export function filterFiles(downloads, fileType) {
-  return downloads.filter(
-    download => {
-      if(!fileType) {
-        return true;
-      }
-      else if (fileType === FILETYPE_PPTX) {
-        return download.file.endsWith('.pptx');
-      }
-      else if (fileType === FILETYPE_DOWNLOADS) {
-        return !download.file.endsWith('.pptx');
-      }
-
+  return downloads.filter((download) => {
+    if (!fileType) {
       return true;
+    } else if (fileType === FILETYPE_PPTX) {
+      return download.file.endsWith(".pptx");
+    } else if (fileType === FILETYPE_DOWNLOADS) {
+      return !download.file.endsWith(".pptx");
+    }
+
+    return true;
   });
-};
+}
 
-export class Downloads extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { message: null, fileType: FILETYPE_ALL, };
-  }
+export function searchFiles(downloads, search) {
+  return downloads.filter((download) => {
+    if (!search) {
+      return true;
+    } else {
+      let match = false;
+      let searchLower = search.toLowerCase();
 
-  makeShortLink(download) {
+      Object.entries(download).map(([, value]) => {
+        if (value.indexOf) {
+          match = match || value.toLowerCase().indexOf(searchLower) >= 0;
+        }
+      });
+      return match;
+    }
+  });
+}
+
+const Downloads = () => {
+  const [fileType, setFileType] = useState(FILETYPE_ALL);
+  const [message, setMessage] = useState(null);
+  const [search, setSearch] = useState(null);
+
+  /**
+   * Make a short link to the download.
+   * @param {string} download The file entry.
+   */
+  const makeShortLink = (download) => {
     // Change the domain so that it is easier to make sense of the lowercase "l"
     const domain = document.location.origin.replace("ai1l", "Ai1L");
 
     return `${domain}?${download.short}`;
+  };
+
+  /**
+   * The type of file to filter on.
+   * @param {string} filter Instance of FILETYPE_ALL or FILETYPE_DOWNLOADS, FILETYPE_PPTX
+   */
+  const filterDownloads = (filter) => {
+    setFileType(filter);
+  };
+
+  // Hide the message we are about to show in a bit
+  if (message) {
+    setTimeout(() => setMessage(null), 3000);
   }
 
-  filterDownloads(filter) {
-    this.setState({fileType: filter});
-  }
+  console.log(downloads.length);
+  const filteredDownloads = downloads
+    ? searchFiles(filterFiles(downloads, fileType), search)
+    : null;
 
-  render() {
-    // Hide the message we are about to show in a bit
-    if (this.state.message) {
-      setTimeout(() => this.setState({ message:'' }), 3000);
-    }
+  return (
+    <Container text>
+      <Header as="h1" dividing>
+        Downloads
+      </Header>
 
-    return (
-      <Container text>
-        <Header as="h1" dividing>
-          Downloads
-        </Header>
+      <Button.Group>
+        <Button
+          active={fileType === FILETYPE_ALL}
+          onClick={() => filterDownloads(FILETYPE_ALL)}
+        >
+          All
+        </Button>
+        <Button
+          active={fileType === FILETYPE_PPTX}
+          onClick={() => filterDownloads(FILETYPE_PPTX)}
+        >
+          Slides (Powerpoints)
+        </Button>
+        <Button
+          active={fileType === FILETYPE_DOWNLOADS}
+          onClick={() => filterDownloads(FILETYPE_DOWNLOADS)}
+        >
+          Books
+        </Button>
+      </Button.Group>
 
-        <Button.Group>
-          <Button active={this.state.fileType === FILETYPE_ALL} onClick={() => this.filterDownloads(FILETYPE_ALL)}>All</Button>
-          <Button active={this.state.fileType === FILETYPE_PPTX} onClick={() => this.filterDownloads(FILETYPE_PPTX)}>Slides (Powerpoints)</Button>
-          <Button active={this.state.fileType === FILETYPE_DOWNLOADS} onClick={() => this.filterDownloads(FILETYPE_DOWNLOADS)}>Books</Button>
-        </Button.Group>
+      <Input
+        style={{ float: "right" }}
+        icon
+        placeholder="Search..."
+        onChange={(e, d) => setSearch(d.value)}
+      >
+        <input />
+        <Icon name="search" />
+      </Input>
 
-        {this.state.message ? <Message positive>{this.state.message}</Message> : <React.Fragment />}
-        <Table celled>
-          <Table.Header>
-            <Table.Row>
-              <Table.HeaderCell colSpan='3'>Title</Table.HeaderCell>
-            </Table.Row>
-          </Table.Header>
+      {filteredDownloads.length === 0 && (
+          <Message warning>
+            <Message.Header>No Files Match</Message.Header>
+            <p>No files match the given search.</p>
+          </Message>
+        )}
 
-          <Table.Body>
-            {filterFiles(downloads, this.state.fileType).map((item, index) => (
-              <Table.Row key={index}>
-                <Table.Cell>
-                  <Popup
-                    content={item.description}
-                    trigger={<div>{item.title}</div>}
-                  />
-                </Table.Cell>
-                <Table.Cell>
-                  <ButtonLink
-                    style={{ padding: 0 }}
-                    className="ui button"
-                    onClick={() => downloadFile(item.file)}
-                  >
-                    Download
-                  </ButtonLink>
-                </Table.Cell>
-                <Table.Cell>
-                  <CopyToClipboard text={this.makeShortLink(item)}>
+      {filteredDownloads.length > 0 && (
+          <Table celled>
+            <Table.Header>
+              <Table.Row>
+                <Table.HeaderCell colSpan="3">Title</Table.HeaderCell>
+              </Table.Row>
+            </Table.Header>
+
+            <Table.Body>
+              {filteredDownloads.map((item, index) => (
+                <Table.Row key={index}>
+                  <Table.Cell>
+                    <Popup
+                      content={item.description}
+                      trigger={<div>{item.title}</div>}
+                    />
+                  </Table.Cell>
+                  <Table.Cell>
+                    <ButtonLink
+                      style={{ padding: 0 }}
+                      className="ui button"
+                      onClick={() => downloadFile(item.file)}
+                    >
+                      Download
+                    </ButtonLink>
+                  </Table.Cell>
+                  <Table.Cell>
+                    <CopyToClipboard text={makeShortLink(item)}>
                       <ButtonLink
                         style={{ padding: 0 }}
                         className="ui button"
-                        onClick={() => this.setState({message:"Copied to the clipboard!"})}
+                        onClick={() => setMessage("Copied to the clipboard!")}
                       >
                         Copy Link
                       </ButtonLink>
                     </CopyToClipboard>
-                </Table.Cell>
-              </Table.Row>
-            ))}
-          </Table.Body>
-        </Table>
-      </Container>
-    );
-  }
-}
+                  </Table.Cell>
+                </Table.Row>
+              ))}
+            </Table.Body>
+          </Table>
+        )}
+    </Container>
+  );
+};
 
 export default Downloads;
