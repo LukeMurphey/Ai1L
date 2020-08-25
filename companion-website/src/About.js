@@ -11,9 +11,10 @@ import {
             <Header as='h1' dividing>
             About
             </Header>
-
-            I wrote this material because I couldn't find content that quite fit with what I wanted.
-            Here are some things that makes this material a little different:
+            Apologetics in One Lesson is a study guide for Bible classes and small groups.
+            This material is a little different than other evidences/apologetics materials in that it focuses on defending the New Testament the way that the New Testemant defends itself: as the product of eyewitness testimony focused on a defense of the resurrection.
+            
+            <p>Here are some things that makes this material a little different than many of the other options:</p>
 
             <Header as='h3' dividing>1. Focus on a defense of the New Testament</Header>
             This material focuses on the New Testament since this is the thing that Christian's most likely know well.
@@ -28,9 +29,9 @@ import {
             <Header as='h3' dividing>2. Material focused on supporting a class environment</Header>
             Many apologetics books do not translate well to a class environment.
             They were written for readers to read but not for teachers to teach.
-            Some have a study guide but it seems like many made the guide as an afterthought.
+            Some apologetics books have study guides but the guides are often made as an afterthought and fail to make the class engaging for students.
 
-            This material is different in that it provides complete material to make the teacher's job easier, including: 
+            This material is different in that it provides complete material to make the teacher's job easier by including:
 
             <ol>
                 <li>Briefing statements to help the teacher achieve the goals of each session</li>
