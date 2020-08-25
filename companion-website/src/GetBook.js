@@ -58,7 +58,7 @@ const GetBook = () => {
           </div>
 
           <div>
-            This material is divrovided free of charge. The printed study guide is
+            This material is provided free of charge. The printed study guide is
             not free but the price is entirely for printing (the author does not
             make a profit).
           </div>
