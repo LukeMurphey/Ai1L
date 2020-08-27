@@ -2,7 +2,7 @@ import { act } from "@testing-library/react";
 import fs from "fs";
 import downloads from "./downloads.json";
 
-test("make sure the downloads are all valid", async () => {
+test("make sure the downloads are all available", async () => {
     const filesMissing = [];
 
     downloads.map(download => {
@@ -16,5 +16,21 @@ test("make sure the downloads are all valid", async () => {
 
     await act(async () => {
         expect(filesMissing).toHaveLength(0);
+    });
+});
+
+test("make sure the shortlinks are not duplicated", async () => {
+    const duplicates = [];
+
+    downloads.map(download => {
+        const sameShortlink = downloads.filter(download2 => download2.short === download.short);
+
+        if(sameShortlink.length > 1) {
+            duplicates.push(download.short);
+        }
+    });
+
+    await act(async () => {
+        expect(duplicates).toHaveLength(0);
     });
 });

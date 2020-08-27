@@ -56,6 +56,13 @@
         "short": "Chapter_1"
     },
     {
+        "title": "Slides: Chapter 2 (Gardening and Harvesting)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 2",
+        "file": "2. Gardening and Harvesting.pptx",
+        "short": "Chapter_2"
+    },
+    {
         "title": "Slides: Chapter 3 (Ambassadors for Christ)",
         "author": "Luke Murphey",
         "description": "The slides for chapter 3",
@@ -68,6 +75,13 @@
         "description": "The slides for chapter 4",
         "file": "4. A-Paul-agetics.pptx",
         "short": "Chapter_4"
+    },
+    {
+        "title": "Slides: Chapter 5 (Is the New Testament from Eyewitnesses?)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 5",
+        "file": "5. Is the New Testament from Eyewitnesses.pptx",
+        "short": "Chapter_5"
     },
     {
         "title": "Slides: Chapter 6 (Eyewitness Memory)",
@@ -91,6 +105,13 @@
         "short": "Chapter_8"
     },
     {
+        "title": "Slides: Chapter 9 (How Not to Start a Religion)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 9",
+        "file": "9. How Not to Start a Religion.pptx",
+        "short": "Chapter_9"
+    },
+    {
         "title": "Slides: Chapter 10 (\"Christians believe by faith not facts\")",
         "author": "Luke Murphey",
         "description": "The slides for chapter 10",
@@ -103,6 +124,27 @@
         "description": "The slides for chapter 11",
         "file": "11. Evidence for God.pptx",
         "short": "Chapter_11"
+    },
+    {
+        "title": "Slides: Chapter 12 (Undesigned Coincidences in the Gospels)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 12",
+        "file": "12. Undesigned Coincidences in the Gospels.pptx",
+        "short": "Chapter_12"
+    },
+    {
+        "title": "Slides: Chapter 13 (Undesigned Coincidences in Acts, Epistles)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 13",
+        "file": "13. Undesigned Coincidences in Acts, Epistles.pptx",
+        "short": "Chapter_13"
+    },
+    {
+        "title": "Slides: Chapter 14 (Bible is Full of Contradictions)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 14",
+        "file": "14. Bible is Full of Contradictions.pptx",
+        "short": "Chapter_14"
     },
     {
         "title": "Slides: Chapter 16 (With the Gospel, I See the World as It Is)",
