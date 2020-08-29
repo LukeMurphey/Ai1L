@@ -118,7 +118,6 @@ const Downloads = () => {
     setTimeout(() => setMessage(null), 3000);
   }
 
-  console.log(message);
   const filteredDownloads = downloads
     ? searchFiles(filterFiles(downloads, fileType), search)
     : null;
