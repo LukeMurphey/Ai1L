@@ -118,7 +118,7 @@ const Downloads = () => {
     setTimeout(() => setMessage(null), 3000);
   }
 
-  console.log(downloads.length);
+  console.log(message);
   const filteredDownloads = downloads
     ? searchFiles(filterFiles(downloads, fileType), search)
     : null;
@@ -128,6 +128,12 @@ const Downloads = () => {
       <Header as="h1" dividing>
         Downloads
       </Header>
+
+      {message && message.length > 0 && (
+        <Message success>
+          The link has been copied to the clipboard
+        </Message>
+      )}
 
       <Button.Group>
         <Button
@@ -161,11 +167,11 @@ const Downloads = () => {
       </Input>
 
       {filteredDownloads.length === 0 && (
-          <Message warning>
-            <Message.Header>No Files Match</Message.Header>
-            <p>No files match the given search.</p>
-          </Message>
-        )}
+        <Message warning>
+          <Message.Header>No Files Match</Message.Header>
+          <p>No files match the given search.</p>
+        </Message>
+      )}
 
       {filteredDownloads.length > 0 && (
           <Table celled>
