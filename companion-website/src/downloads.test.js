@@ -34,3 +34,19 @@ test("make sure the shortlinks are not duplicated", async () => {
         expect(duplicates).toHaveLength(0);
     });
 });
+
+test("make sure the files are not duplicated", async () => {
+    const duplicates = [];
+
+    downloads.map(download => {
+        const sameFile = downloads.filter(download2 => download2.file === download.file);
+
+        if(sameFile.length > 1) {
+            duplicates.push(download.file);
+        }
+    });
+
+    await act(async () => {
+        expect(duplicates).toHaveLength(0);
+    });
+});

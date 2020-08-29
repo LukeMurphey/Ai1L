@@ -147,6 +147,13 @@
         "short": "Chapter_14"
     },
     {
+        "title": "Slides: Chapter 15 (You cannot trust the Gospel authors since they were Christians)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 15",
+        "file": "15. You cannot trust the Gospel authors since they were Christians.pptx",
+        "short": "Chapter_15"
+    },
+    {
         "title": "Slides: Chapter 16 (With the Gospel, I See the World as It Is)",
         "author": "Luke Murphey",
         "description": "The slides for chapter 16",
@@ -161,11 +168,32 @@
         "short": "Chapter_17"
     },
     {
-        "title": "Slides: Chapter 18 (\"Isaiah 53 is not fulfilled prophecy\")",
+        "title": "Slides: Chapter 18 (“Isaiah 53 is not fulfilled prophecy”)",
         "author": "Luke Murphey",
         "description": "The slides for chapter 18",
         "file": "18. Isaiah 53 is not fulfilled prophecy.pptx",
         "short": "Chapter_18"
+    },
+    {
+        "title": "Slides: Chapter 19 (Out of Context I Called My Prophecy?)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 19",
+        "file": "19. Out of Context I Called My Prophecy.pptx",
+        "short": "Chapter_19"
+    },
+    {
+        "title": "Slides: Chapter 20 (“Jesus didn't claim to be God”)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 20",
+        "file": "20. Jesus didn't claim to be God.pptx",
+        "short": "Chapter_20"
+    },
+    {
+        "title": "Slides: Chapter 21 (Regarding Miracles)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 21",
+        "file": "21. Regarding Miracles.pptx",
+        "short": "Chapter_21"
     },
     {
         "title": "Slides: Chapter 22 (Is the New Testament Corrupted?)",
@@ -185,14 +213,21 @@
         "title": "Slides: Chapter 24 (Facts 1 & 2)",
         "author": "Luke Murphey",
         "description": "The slides for chapter 24",
-        "file": "24. Facts 1 & 2.pptx",
+        "file": "24. Facts 1 and 2.pptx",
         "short": "Chapter_24"
     },
     {
-        "title": "Slides: Chapter 26 (Facts 3 and 4)",
+        "title": "Slides: Chapter 25 (Facts 3 and 4)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 25",
+        "file": "25. Facts 3 and 4.pptx",
+        "short": "Chapter_25"
+    },
+    {
+        "title": "Slides: Chapter 26 (Response to the Minimal Facts for the Resurrection)",
         "author": "Luke Murphey",
         "description": "The slides for chapter 26",
-        "file": "26. Facts 3 and 4.pptx",
+        "file": "26. Response to the Minimal Facts for the Resurrection.pptx",
         "short": "Chapter_26"
     },
     {
@@ -201,5 +236,12 @@
         "description": "The slides for chapter 27",
         "file": "27. Dealing with Doubt.pptx",
         "short": "Chapter_27"
+    },
+    {
+        "title": "Slides: Chapter 28 (Why Doesn’t God Make Himself More Obvious?)",
+        "author": "Luke Murphey",
+        "description": "The slides for chapter 28",
+        "file": "28. Why Doesn’t God Make Himself More Obvious.pptx",
+        "short": "Chapter_28"
     }
 ]
