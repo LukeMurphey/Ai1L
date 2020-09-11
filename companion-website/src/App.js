@@ -22,9 +22,9 @@ function TabMenuItem({ label, to, activeOnlyWhenExact }) {
   });
 
   return (
-      <Menu.Item
+    <Menu.Item
       name={label}
-      active={match === label}
+      active={match}
       style={{ color: "white" }}
     >
       <Link to={to}>{label}</Link>
@@ -58,7 +58,7 @@ class MainSite extends Component {
               inverted
               style={{ borderColor: "#009ec2" }}
             >
-              <TabMenuItem to="/" label="Get the Book" activeOnlyWhenExact={true}/>
+              <TabMenuItem to="/" label="Get the Book" activeOnlyWhenExact={true} />
               <TabMenuItem to="/resources" label="Downloads" />
               <TabMenuItem to="/about" label="About" />
             </Menu>
