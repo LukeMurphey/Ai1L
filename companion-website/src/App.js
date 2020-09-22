@@ -37,7 +37,7 @@ function TabMenuItem({ label, to, activeOnlyWhenExact }) {
  */
 class MainSite extends Component {
   render() {
-    // Try to download any files requestedd as a shortlink
+    // Try to download any files requested as a short-link
     // This failed if it returns a string (which contains a message)
     const downloadMessage = downloadFileFromQuery();
 
