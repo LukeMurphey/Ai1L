@@ -243,5 +243,33 @@
         "description": "The slides for chapter 28",
         "file": "28. Why Doesn’t God Make Himself More Obvious.pptx",
         "short": "Chapter_28"
+    },
+    {
+        "title": "Slides: Was Jesus a Copycat?",
+        "author": "Luke Murphey",
+        "description": "The slides for overflow content regarding whether Jesus was just a modified pagan myth",
+        "file": "Overflow. Jesus copycat.pptx",
+        "short": "Overflow_copycat"
+    },
+    {
+        "title": "Slides: Names in the Bible",
+        "author": "Luke Murphey",
+        "description": "The slides for overflow content regarding how names can be used to determine if an ancient work is truthful",
+        "file": "Overflow. Names.pptx",
+        "short": "Overflow_names"
+    },
+    {
+        "title": "Slides: Steamrollers",
+        "author": "Luke Murphey",
+        "description": "The slides for overflow content regarding how to deal with people that hit you with more objections faster that you can handle",
+        "file": "Overflow. Steamrollers.pptx",
+        "short": "Overflow_steamroller"
+    },
+    {
+        "title": "Slides: Religion and the English Language",
+        "author": "Luke Murphey",
+        "description": "The slides for overflow content regarding how people can misuse language to make a foolish arguments sound good",
+        "file": "Overflow. Religion and the English Language.pptx",
+        "short": "Overflow_english"
     }
 ]
