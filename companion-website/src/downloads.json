@@ -271,5 +271,11 @@
         "description": "The slides for overflow content regarding how people can misuse language to make a foolish arguments sound good",
         "file": "Overflow. Religion and the English Language.pptx",
         "short": "Overflow_english"
+    },
+    {
+        "title": "Slides: Reductio Ad Absurdum",
+        "description": "The slides for overflow content regarding how to see ideas that are absurd",
+        "file": "Overflow. Reductio Ad Absurdum.pptx",
+        "short": "Overflow_reductio"
     }
 ]
