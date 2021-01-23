@@ -57,14 +57,18 @@ const FILETYPE_ALL = null;
 const FILETYPE_PPTX = "pptx";
 const FILETYPE_DOWNLOADS = "downloads";
 
+export function isSlide(download) {
+  return download.title.startsWith("Slides: ");
+}
+
 export function filterFiles(downloads, fileType) {
   return downloads.filter((download) => {
     if (!fileType) {
       return true;
     } else if (fileType === FILETYPE_PPTX) {
-      return download.file.endsWith(".pptx");
+      return isSlide(download);
     } else if (fileType === FILETYPE_DOWNLOADS) {
-      return !download.file.endsWith(".pptx");
+      return !isSlide(download);
     }
 
     return true;
