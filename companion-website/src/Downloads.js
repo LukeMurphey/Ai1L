@@ -1,4 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import {
+  useRouteMatch,
+  Link
+} from "react-router-dom";
 import {
   Container,
   Header,
@@ -13,6 +17,7 @@ import ButtonLink from "./ButtonLink";
 import downloads from "./downloads.json";
 import queryString from "query-string";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { PREZOS, RESOURCES, DOWNLOADS } from "./URLs";
 
 export function downloadFileFromQuery() {
   // eslint-disable-next-line no-restricted-globals
@@ -98,6 +103,21 @@ const Downloads = () => {
   const [message, setMessage] = useState(null);
   const [search, setSearch] = useState(null);
 
+  const match = useRouteMatch();
+
+  // Determine the file type based on the React router
+  useEffect(() => {
+    if (match.path === PREZOS ) {
+      filterDownloads(FILETYPE_PPTX);
+    }
+    else if (match.path === DOWNLOADS ) {
+      filterDownloads(FILETYPE_DOWNLOADS);
+    }
+    else {
+      filterDownloads(FILETYPE_ALL);
+    }
+  }, [match]);
+
   /**
    * Make a short link to the download.
    * @param {string} download The file entry.
@@ -140,20 +160,23 @@ const Downloads = () => {
 
       <Button.Group>
         <Button
+          as={Link}
+          to={RESOURCES}
           active={fileType === FILETYPE_ALL}
-          onClick={() => filterDownloads(FILETYPE_ALL)}
         >
           All
         </Button>
         <Button
+          as={Link}
+          to={PREZOS}
           active={fileType === FILETYPE_PPTX}
-          onClick={() => filterDownloads(FILETYPE_PPTX)}
         >
           Slides (Powerpoints)
         </Button>
         <Button
+          as={Link}
+          to={DOWNLOADS}
           active={fileType === FILETYPE_DOWNLOADS}
-          onClick={() => filterDownloads(FILETYPE_DOWNLOADS)}
         >
           Books
         </Button>

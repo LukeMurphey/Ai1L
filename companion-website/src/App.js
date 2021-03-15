@@ -10,6 +10,7 @@ import {
 import GetBook from "./GetBook";
 import About from "./About";
 import Downloads, { downloadFileFromQuery } from "./Downloads";
+import { MAIN, PREZOS, RESOURCES, DOWNLOADS, ABOUT} from "./URLs";
 import "./App.css";
 
 /**
@@ -68,13 +69,19 @@ class MainSite extends Component {
         {downloadMessage ? <Message style={{padding: 16}} negative>{downloadMessage}</Message> : <React.Fragment />}
 
         <Switch>
-          <Route exact path="/">
+          <Route exact path={MAIN}>
             <GetBook />
           </Route>
-          <Route path="/resources">
+          <Route path={RESOURCES}>
             <Downloads />
           </Route>
-          <Route path="/about">
+          <Route path={PREZOS}>
+            <Downloads />
+          </Route>
+          <Route path={DOWNLOADS}>
+            <Downloads />
+          </Route>
+          <Route path={ABOUT}>
             <About />
           </Route>
         </Switch>
