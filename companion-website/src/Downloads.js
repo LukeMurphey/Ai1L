@@ -224,8 +224,8 @@ const Downloads = () => {
                         floating
                       >
                         <Dropdown.Menu>
-                          <Dropdown.Item onClick={() => downloadFile(item.file)}>Download</Dropdown.Item>
-                          {item.file_pptx ? <Dropdown.Item onClick={() => downloadFile(item.file_pptx)}>Download PPTX</Dropdown.Item> : <></> }
+                        {item.file_pptx ? <Dropdown.Item onClick={() => downloadFile(item.file)}>Download (PDF format)</Dropdown.Item> : <Dropdown.Item onClick={() => downloadFile(item.file)}>Download</Dropdown.Item>}
+                          {item.file_pptx ? <Dropdown.Item onClick={() => downloadFile(item.file_pptx)}>Download (PowerPoint format)</Dropdown.Item> : <></> }
                           <CopyToClipboard text={makeShortLink(item)}>
                             <Dropdown.Item
                               onClick={() => setMessage("Copied to the clipboard!")}
