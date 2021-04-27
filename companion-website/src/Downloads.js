@@ -12,8 +12,8 @@ import {
   Button,
   Input,
   Icon,
+  Dropdown,
 } from "semantic-ui-react";
-import ButtonLink from "./ButtonLink";
 import downloads from "./downloads.json";
 import queryString from "query-string";
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -217,24 +217,25 @@ const Downloads = () => {
                     />
                   </Table.Cell>
                   <Table.Cell>
-                    <ButtonLink
-                      style={{ padding: 0 }}
-                      className="ui button"
-                      onClick={() => downloadFile(item.file)}
-                    >
-                      Download
-                    </ButtonLink>
-                  </Table.Cell>
-                  <Table.Cell>
-                    <CopyToClipboard text={makeShortLink(item)}>
-                      <ButtonLink
-                        style={{ padding: 0 }}
-                        className="ui button"
-                        onClick={() => setMessage("Copied to the clipboard!")}
+                    <Button.Group>
+                      <Button onClick={() => downloadFile(item.file)}>Download</Button>
+                      <Dropdown
+                        className='button icon'
+                        floating
                       >
-                        Copy Link
-                      </ButtonLink>
-                    </CopyToClipboard>
+                        <Dropdown.Menu>
+                          <Dropdown.Item onClick={() => downloadFile(item.file)}>Download</Dropdown.Item>
+                          {item.file_pptx ? <Dropdown.Item onClick={() => downloadFile(item.file_pptx)}>Download PPTX</Dropdown.Item> : <></> }
+                          <CopyToClipboard text={makeShortLink(item)}>
+                            <Dropdown.Item
+                              onClick={() => setMessage("Copied to the clipboard!")}
+                            >
+                              Copy Link
+                            </Dropdown.Item>
+                          </CopyToClipboard>
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </Button.Group>
                   </Table.Cell>
                 </Table.Row>
               ))}

@@ -46,6 +46,7 @@
         "author": "Luke Murphey",
         "description": "The introductory slides for the class",
         "file": "0. Intro.pdf",
+        "file_pptx": "0. Intro.pptx",
         "short": "Intro"
     },
     {
@@ -53,6 +54,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 1",
         "file": "1. Art of Asking Questions.pdf",
+        "file_pptx": "1. Art of Asking Questions.pptx",
         "short": "Chapter_1"
     },
     {
@@ -60,6 +62,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 2",
         "file": "2. Gardening and Harvesting.pdf",
+        "file_pptx": "2. Gardening and Harvesting.pptx",
         "short": "Chapter_2"
     },
     {
@@ -67,6 +70,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 3",
         "file": "3. Ambassadors for Christ.pdf",
+        "file_pptx": "3. Ambassadors for Christ.pptx",
         "short": "Chapter_3"
     },
     {
@@ -74,6 +78,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 4",
         "file": "4. A-Paul-agetics.pdf",
+        "file_pptx": "4. A-Paul-agetics.pptx",
         "short": "Chapter_4"
     },
     {
@@ -81,6 +86,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 5",
         "file": "5. Is the New Testament from Eyewitnesses.pdf",
+        "file_pptx": "5. Is the New Testament from Eyewitnesses.pptx",
         "short": "Chapter_5"
     },
     {
@@ -88,6 +94,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 6",
         "file": "6. Eyewitness Memory.pdf",
+        "file_pptx": "6. Eyewitness Memory.pptx",
         "short": "Chapter_6"
     },
     {
@@ -95,6 +102,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 7",
         "file": "7. Primacy of the Primary Sources.pdf",
+        "file_pptx": "7. Primacy of the Primary Sources.pptx",
         "short": "Chapter_7"
     },
     {
@@ -102,6 +110,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 8",
         "file": "8. Jesus the Rabbi.pdf",
+        "file_pptx": "8. Jesus the Rabbi.pptx",
         "short": "Chapter_8"
     },
     {
@@ -109,6 +118,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 9",
         "file": "9. How Not to Start a Religion.pdf",
+        "file_pptx": "9. How Not to Start a Religion.pptx",
         "short": "Chapter_9"
     },
     {
@@ -116,6 +126,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 10",
         "file": "10. Christians believe by faith not facts.pdf",
+        "file_pptx": "10. Christians believe by faith not facts.pptx",
         "short": "Chapter_10"
     },
     {
@@ -123,6 +134,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 11",
         "file": "11. Evidence for God.pdf",
+        "file_pptx": "11. Evidence for God.pptx",
         "short": "Chapter_11"
     },
     {
@@ -130,6 +142,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 12",
         "file": "12. Undesigned Coincidences in the Gospels.pdf",
+        "file_pptx": "12. Undesigned Coincidences in the Gospels.pptx",
         "short": "Chapter_12"
     },
     {
@@ -137,6 +150,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 13",
         "file": "13. Undesigned Coincidences in Acts, Epistles.pdf",
+        "file_pptx": "13. Undesigned Coincidences in Acts, Epistles.pptx",
         "short": "Chapter_13"
     },
     {
@@ -144,6 +158,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 14",
         "file": "14. Bible is Full of Contradictions.pdf",
+        "file_pptx": "14. Bible is Full of Contradictions.pptx",
         "short": "Chapter_14"
     },
     {
@@ -151,6 +166,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 15",
         "file": "15. You cannot trust the Gospel authors since they were Christians.pdf",
+        "file_pptx": "15. You cannot trust the Gospel authors since they were Christians.pptx",
         "short": "Chapter_15"
     },
     {
@@ -158,6 +174,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 16",
         "file": "16. With the Gospel, I See the World as It Is.pdf",
+        "file_pptx": "16. With the Gospel, I See the World as It Is.pptx",
         "short": "Chapter_16"
     },
     {
@@ -165,6 +182,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 17",
         "file": "17. Isaiah 53.pdf",
+        "file_pptx": "17. Isaiah 53.pptx",
         "short": "Chapter_17"
     },
     {
@@ -172,6 +190,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 18",
         "file": "18. Isaiah 53 is not fulfilled prophecy.pdf",
+        "file_pptx": "18. Isaiah 53 is not fulfilled prophecy.pptx",
         "short": "Chapter_18"
     },
     {
@@ -179,6 +198,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 19",
         "file": "19. Out of Context I Called My Prophecy.pdf",
+        "file_pptx": "19. Out of Context I Called My Prophecy.pptx",
         "short": "Chapter_19"
     },
     {
@@ -186,6 +206,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 20",
         "file": "20. Jesus didn't claim to be God.pdf",
+        "file_pptx": "20. Jesus didn't claim to be God.pptx",
         "short": "Chapter_20"
     },
     {
@@ -193,6 +214,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 21",
         "file": "21. Regarding Miracles.pdf",
+        "file_pptx": "21. Regarding Miracles.pptx",
         "short": "Chapter_21"
     },
     {
@@ -200,6 +222,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 22",
         "file": "22. Is the New Testament Corrupted.pdf",
+        "file_pptx": "22. Is the New Testament Corrupted.pptx",
         "short": "Chapter_22"
     },
     {
@@ -207,6 +230,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 23",
         "file": "23. Has the Bible Been Mistranslated.pdf",
+        "file_pptx": "23. Has the Bible Been Mistranslated.pptx",
         "short": "Chapter_23"
     },
     {
@@ -214,6 +238,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 24",
         "file": "24. Facts 1 and 2.pdf",
+        "file_pptx": "24. Facts 1 and 2.pptx",
         "short": "Chapter_24"
     },
     {
@@ -221,6 +246,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 25",
         "file": "25. Facts 3 and 4.pdf",
+        "file_pptx": "25. Facts 3 and 4.pptx",
         "short": "Chapter_25"
     },
     {
@@ -228,6 +254,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 26",
         "file": "26. Response to the Minimal Facts for the Resurrection.pdf",
+        "file_pptx": "26. Response to the Minimal Facts for the Resurrection.pptx",
         "short": "Chapter_26"
     },
     {
@@ -235,6 +262,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 27",
         "file": "27. Dealing with Doubt.pdf",
+        "file_pptx": "27. Dealing with Doubt.pptx",
         "short": "Chapter_27"
     },
     {
@@ -242,6 +270,7 @@
         "author": "Luke Murphey",
         "description": "The slides for chapter 28",
         "file": "28. Why Doesn’t God Make Himself More Obvious.pdf",
+        "file_pptx": "28. Why Doesn’t God Make Himself More Obvious.pptx",
         "short": "Chapter_28"
     },
     {
@@ -249,6 +278,7 @@
         "author": "Luke Murphey",
         "description": "The slides for overflow content regarding whether Jesus was just a modified pagan myth",
         "file": "Overflow. Jesus copycat.pdf",
+        "file_pptx": "Overflow. Jesus copycat.pptx",
         "short": "Overflow_copycat"
     },
     {
@@ -256,6 +286,7 @@
         "author": "Luke Murphey",
         "description": "The slides for overflow content regarding how names can be used to determine if an ancient work is truthful",
         "file": "Overflow. Names.pdf",
+        "file_pptx": "Overflow. Names.pptx",
         "short": "Overflow_names"
     },
     {
@@ -263,6 +294,7 @@
         "author": "Luke Murphey",
         "description": "The slides for overflow content regarding how to deal with people that hit you with more objections faster that you can handle",
         "file": "Overflow. Steamrollers.pdf",
+        "file_pptx": "Overflow. Steamrollers.pptx",
         "short": "Overflow_steamroller"
     },
     {
@@ -270,6 +302,7 @@
         "author": "Luke Murphey",
         "description": "The slides for overflow content regarding how people can misuse language to make a foolish arguments sound good",
         "file": "Overflow. Religion and the English Language.pdf",
+        "file_pptx": "Overflow. Religion and the English Language.pptx",
         "short": "Overflow_english"
     },
     {
@@ -277,6 +310,7 @@
         "description": "The slides for overflow content regarding how to see ideas that are absurd",
         "author": "Luke Murphey",
         "file": "Overflow. Reductio Ad Absurdum.pdf",
+        "file_pptx": "Overflow. Reductio Ad Absurdum.pptx",
         "short": "Overflow_reductio"
     }
 ]

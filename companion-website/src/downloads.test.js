@@ -14,6 +14,74 @@ test("make sure the downloads are all available", async () => {
         });
     });
 
+
+
+    await act(async () => {
+        expect(filesMissing).toHaveLength(0);
+    });
+});
+
+test("make sure the PPTXs are available for the presentations", async () => {
+    const filesMissing = [];
+
+    downloads.map(download => {
+        if(download.title.startsWith("Slides: ") && !download.file_pptx) {
+            filesMissing.push(download.short);
+        }
+    });
+
+    await act(async () => {
+        expect(filesMissing).toHaveLength(0);
+    });
+});
+
+test("make sure the PPTXs exist", async () => {
+    const filesMissing = [];
+
+    downloads.map(download => {
+        if(download.file_pptx) {
+            fs.accessSync(`public/files/${download.file_pptx}`, fs.constants.F_OK, (err) => {
+                if(err) {
+                    console.log(err, download.short);
+                    filesMissing.push(download.short);
+                }
+            });
+        }
+    });
+
+    await act(async () => {
+        expect(filesMissing).toHaveLength(0);
+    });
+});
+
+test("make sure the PPTXs have the right extension", async () => {
+    const filesMissing = [];
+
+    downloads.map(download => {
+        if(download.file_pptx && !download.file_pptx.endsWith('.pptx')) {
+            filesMissing.push(download.short);
+        }
+    });
+
+    await act(async () => {
+        expect(filesMissing).toHaveLength(0);
+    });
+});
+
+test("make sure the PPTXs have the right file name (the part before the extension is correct)", async () => {
+    const filesMissing = [];
+    
+    downloads.map(download => {
+        if(download.file_pptx ) {
+            const pptx_wo_extension = download.file_pptx.substring(0, download.file_pptx.length - 5);
+            const pdf_wo_extension = download.file.substring(0, download.file.length - 4);
+
+            if(pptx_wo_extension !== pdf_wo_extension) {
+                filesMissing.push(download.short);
+            }
+        }
+    });
+
     await act(async () => {
         expect(filesMissing).toHaveLength(0);
     });
