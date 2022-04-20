@@ -12,12 +12,12 @@ import {
             About
             </Header>
             Apologetics in One Lesson is a study guide for Bible classes and small groups.
-            This material is a little different than other apologetics materials in that it focuses on defending the New Testament the way that the New Testemant defends itself: as the product of eyewitness testimony focused on a defense of the resurrection.
+            This material is a little different than other apologetics materials in that it focuses on defending the New Testament the way that the New Testament defends itself: as the product of eyewitness testimony focused on a defense of the resurrection.
             
-            <p>Here are some things that makes this material does:</p>
+            <p>Here are some things that this material does:</p>
 
             <Header as='h3' dividing>1. Focuses on a defense of the New Testament</Header>
-            This material focuses on the New Testament since this is the thing that Christian's most likely know well.
+            This material focuses on the New Testament since this is the thing that Christians most likely know well.
             Specifically, this content focuses on a defense of Jesus' resurrection and the Gospel accounts because:
 
             <ol>
@@ -40,9 +40,9 @@ import {
                 <li>References to related books and videos to enable the teacher to be prepared</li>
             </ol>
 
-            <Header as='h3' dividing>3. Exposes Christian's to some of the latest New Testament research</Header>
+            <Header as='h3' dividing>3. Exposes Christians to some of the latest New Testament research</Header>
             Great gains have been made in recent years in New Testament studies in several areas including providing more reasons to see the Gospels as the product of eyewitness testimony.
-            Too often, Christian's are unaware of these recent developments.
+            Too often, Christians are unaware of these recent developments.
         </Container>
       )
     }
